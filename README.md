@@ -13,8 +13,10 @@ Required hardware
 Contents
 ========
 
-1. emacspedal_serial.ino
--------------------------
+------------------------
+
+# emacspedal_serial.ino
+
 
 The original version from the early 2000s, last edited 2008, used on
 an Arduino NG.
@@ -29,16 +31,19 @@ http://projects.linuxtogo.org/projects/kbdd/
 
 * Drawbacks: Requires special software on the computer side.
 
-2. emacspedal_uno_hid.ino
 --------------------------
+
+# emacspedal_uno_hid.ino
+
 
 Version for the Arduino Uno with USB HID firmware. This ran on an original Arduino Uno that died in 2019. Requires the default USB-serial firmware to be replaced with the USB HID firmware after programming. This firmware converts serial characters to USB key presses.
 
 * Advantages: OS-independent, presenting a normal USB keyboard to the computer.
 * Drawbacks: Works only on genuine Arduino Uno boards with USB adapter implemented in firmware on a second PIC. Converts serial characters to instantaneous key events, so not really useful for modifier keys. Requires the USB-serial firmware to be replaced with USB HID firmware, which disables the normal serial communication.
 
-3. emacspedal_leonardo.ino
---------------------------
+---------------------------------
+
+# emacspedal_leonardo.ino
 
 The current incarnation of the CFEmacspedal, from 2019.
 Has two selectable sets of key codes: instantaneous motion keys (Page up/down, Home, End) useful e.g. for presentations or turning music sheets, and persistent modifier keys, useful for Emacs editing.
@@ -68,9 +73,10 @@ If you encounter an error message from *avrdude* when uploading, there are two w
 A mode switch to select between two sets of key codes was added.
 * Drawbacks: Works only on Leonardo and compatible boards. Program upload with an external programmer may be necessary.
 
+-----------------------
 
 Usage
-------
+=====
 
 * Change the code according to your type of pedal and desired key codes.
 If your pedals are momentarily closing (NO) rather than breaking (NC), you must swap HIGH and LOW on relevant lines.
