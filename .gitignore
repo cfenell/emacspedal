@@ -1,0 +1,6 @@
+# Ignore Emacs backups
+*~
+\#*\#
+
+# Ignore any compiled Arduino code
+*.hex
